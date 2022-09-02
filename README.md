@@ -14,6 +14,14 @@
 `termcolor` provides a simple and convenient API to output colorized terminal output with support for
 terminal detection and color supression.
 
+# Installation
+
+`termcolor` uses go modules and requires Go 1.14 or greater.
+
+```
+$ go get -u github.com/halimath/termcolor
+```
+
 # Usage
 
 `termcolor` provides a `Printer` type which accepts strings and optional style attributes and outputs 
@@ -24,14 +32,6 @@ automatically detect, if the underlying device is a character device.
 p := termcolor.Stdout()
 
 p.Printf("Welcome to %s output!", p.Styled("colored", termcolor.ForegroundCyan), termcolor.Bold)
-```
-
-## Installation
-
-`termcolor` uses go modules and requires Go 1.11 or greater.
-
-```
-$ go get -u github.com/halimath/termcolor
 ```
 
 # Changelog
